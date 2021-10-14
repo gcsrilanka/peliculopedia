@@ -16,7 +16,7 @@ Application to maintain movie reviews.
 Please check [this](https://www.figma.com/file/dfY62OsKwSo27Zqz3eVGCI/Peliculopedia?node-id=0%3A1) Figma file. 
 
 ## Techstack
-- React JS, Firebase
+- React JS, Firebase, [Bulma CSS](https://bulma.io/documentation/)
 
 # How to contribute
 In general, we follow the "fork-and-pull" Git workflow. 
