@@ -4,60 +4,26 @@
 [![React JS](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)]()
 [![Vue version](https://img.shields.io/badge/Licence-MIT-orange)]()
 
-
-# About
-Coming soon
-
-
-# Setting up
-
-
-### Requirements
-
-- [ReactJS](https://reactjs.org/docs/getting-started.html)
-- A Firebase Account - [Sign Up](https://console.firebase.google.com/)
+# About the project
+Application to maintain movie reviews.
+- Users(general public) can visit the site and view the reviews on their favourite movies.
+- Users can sign into the platform using Google Account.
+- Signed-in users can add movies, rate movies and review movies.
+- Moderstors can edit/delete reviews and ban users for unacceptable behaviour. 
 
 
-### Local development
+## UI design
+Please check [this](https://www.figma.com/file/dfY62OsKwSo27Zqz3eVGCI/Peliculopedia?node-id=0%3A1) Figma file. 
 
-After the above requirements have been met: 
-<br><br>
+## Techstack
+- React JS, Firebase
 
-<b>1. Fork this repository</b>
+# How to contribute
+In general, we follow the "fork-and-pull" Git workflow. 
+- Please check the issues. If you have any doubt please comment there.
+- Please comment before you start work on the issue (this will help us to minimize duplicate contributions)
 
-<b>2. Clone this repository and `cd` into it</b>
-
-```bash
-git clone https://github.com/GitHubExperts-LK/peliculopedia.git
-cd peliculopedia
-```
-<br>
-
-<b>3. Install dependencies</b>
-
-```bash
-yarn install
-```
-<br>
-
-<b>4. Setup Firebase Credentials</b>
-
-You will need the config file from the Firebase Console. You have to create a new Firebase project, register a new app and obtain the config file from the console. <br>
-[How to create a Firebase project.](https://firebase.google.com/docs/web/setup#create-project)<br>
-[How to register an app.](https://firebase.google.com/docs/web/setup#register-app)
-
-<br>
-
-<b>5. Run the project </b>
-
-```bash
-yarn start
-```
-<br>
-
-# Contributing
-
-Please refer to each project's style and contribution guidelines for submitting patches and additions. In general, we follow the "fork-and-pull" Git workflow.
+After selecting an issue,
 
 1. Fork the repo on GitHub
 2. Clone the project to your own machine
