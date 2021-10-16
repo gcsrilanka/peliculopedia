@@ -1,0 +1,61 @@
+$primary-color: #0F0F14;
+$primary-font-color: #FFFFFF;
+
+$gray-001: #1A1820;
+$gray-002: #66686C;
+$gray-003: #EDEEF2;
+$gray-004: #222127;
+$gray-005: #28262E;
+
+.container {
+  .movieSection {
+    border-bottom: $gray-005 .1px solid;
+    margin-bottom: 2rem;
+
+    &Header {
+      display: flex;
+      justify-content: space-between;
+
+      & > h1{
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      & > button {
+        background: transparent;
+        font-size: 1rem;
+        color: $gray-002;
+        border: none;
+      }
+    }
+
+    &Body {
+      display: flex;
+      padding: 2rem 0;
+
+      &Movie {
+        padding: 0 1rem;
+
+        &Poster {
+          border-radius: 10px;
+        }
+
+        &Title {
+          padding: .5rem 0 .2rem 0;
+          font-weight: bold;
+        }
+
+        &Rating {
+          display: flex;
+          align-items: center;
+
+          & > label {
+            margin-left: 0.5rem;
+            font-weight: bold;
+            color: $gray-002;
+          }
+        }
+      }
+    }
+  }
+}

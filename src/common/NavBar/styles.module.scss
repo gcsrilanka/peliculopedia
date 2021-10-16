@@ -1,0 +1,142 @@
+$primary-color: #0F0F14;
+$primary-font-color: #FFFFFF;
+
+$gray-001: #1A1820;
+$gray-002: #66686C;
+$gray-003: #EDEEF2;
+$gray-004: #222127;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background: $primary-color;
+  min-height: 100vh;
+  height: 100%;
+  color: $primary-font-color;
+
+  .header {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    justify-content: space-between;
+
+    padding: 2rem 3rem;
+
+    &Actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+
+      &Search {
+        color: $primary-font-color;
+        background: $gray-001;
+        border-radius: 20px;
+        line-height: 2rem;
+        padding: 4px 20px;
+        outline: none;
+        border: none;
+        min-width: 50%;
+
+        font-size: 1rem;
+      }
+
+      &List {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        background: none;
+        border: none;
+
+        & > li > a {
+          font-weight: bold;
+          color: $gray-002;
+
+          & > img {
+            max-width: 3rem;
+            border-radius: 100px;
+            border: $gray-002 1px solid;
+          }
+        }
+
+        & > li {
+          &[data-active=true] {
+            & > a {
+              color: $gray-003;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .body {
+    display: grid;
+    grid-template-columns: 2fr 9fr 3fr;
+    height: 100vh;
+
+    .navBar {
+      padding: 3rem 4rem 2rem 3rem;
+
+      &Categories {
+        &List {
+          margin-bottom: 2rem;
+          color: $gray-003;
+          font-weight: bold;
+
+          & > ul {
+            padding: .4rem 0;
+
+            & > li {
+              font-weight: normal;
+              padding: .4rem 0;
+              color: $gray-003;
+
+              & > a {
+                color: $gray-002;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .content {
+      width: 100%;
+      background: $gray-001;
+      padding: 3rem;
+      border-radius: 20px 0 0 0;
+    }
+
+    .sideBar {
+      padding: 3rem;
+      background: $gray-004;
+      max-height: 100vh;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+
+      & > h1 {
+        font-weight: bold;
+        font-size: 1.3rem;
+      }
+
+      &Trailers {
+        padding: 1rem 0;
+
+        & > img {
+          border-radius: 10px;
+          margin: 1rem 0;
+        }
+
+        & > p {
+          color: $gray-003;
+        }
+      }
+    }
+  }
+}
