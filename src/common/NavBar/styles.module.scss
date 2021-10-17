@@ -73,7 +73,8 @@ $gray-004: #222127;
   .body {
     display: grid;
     grid-template-columns: 2fr 9fr 3fr;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
 
     .navBar {
       padding: 3rem 4rem 2rem 3rem;
@@ -111,7 +112,7 @@ $gray-004: #222127;
     .sideBar {
       padding: 3rem;
       background: $gray-004;
-      max-height: 100vh;
+      height: 100%;
       overflow-y: scroll;
 
       &::-webkit-scrollbar {

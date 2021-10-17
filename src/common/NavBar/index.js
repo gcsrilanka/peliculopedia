@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom'
 
 import styles from './styles.module.scss'
 
+/**
+ * A Layout component
+ *
+ * @param {Object} props { children }
+ * @returns
+ */
 const NavBarLayout = ({ children }) => {
   return (
     <section className={styles.container}>
@@ -34,7 +40,6 @@ const NavBarLayout = ({ children }) => {
                 <li><Link to='Comedy'>Comedy</Link></li>
                 <li><Link to='Adventure'>Adventure</Link></li>
                 <li><Link to='Drama'>Drama</Link></li>
-                <li><Link to='more'>More...</Link></li>
               </ul>
             </li>
             <li className={styles.navBarCategoriesList}>
@@ -45,7 +50,6 @@ const NavBarLayout = ({ children }) => {
                 <li><Link to='Tamil'>Tamil</Link></li>
                 <li><Link to='Telugu'>Telugu</Link></li>
                 <li><Link to='Marathi'>Marathi</Link></li>
-                <li><Link to='more'>More...</Link></li>
               </ul>
             </li>
           </ul>
@@ -59,28 +63,16 @@ const NavBarLayout = ({ children }) => {
             <p>Marvel Studios' Avengers: Endgame - Official Trailer </p>
           </div>
           <div className={styles.sideBarTrailers}>
-            <img src='/assets/trailers/marvel.jpeg' />
-            <p>Marvel Studios' Avengers: Endgame - Official Trailer </p>
+            <img src='/assets/trailers/aladin.jpeg' />
+            <p>Disney's Aladdin Official Trailer</p>
           </div>
           <div className={styles.sideBarTrailers}>
             <img src='/assets/trailers/marvel.jpeg' />
             <p>Marvel Studios' Avengers: Endgame - Official Trailer </p>
           </div>
           <div className={styles.sideBarTrailers}>
-            <img src='/assets/trailers/marvel.jpeg' />
-            <p>Marvel Studios' Avengers: Endgame - Official Trailer </p>
-          </div>
-          <div className={styles.sideBarTrailers}>
-            <img src='/assets/trailers/marvel.jpeg' />
-            <p>Marvel Studios' Avengers: Endgame - Official Trailer </p>
-          </div>
-          <div className={styles.sideBarTrailers}>
-            <img src='/assets/trailers/marvel.jpeg' />
-            <p>Marvel Studios' Avengers: Endgame - Official Trailer </p>
-          </div>
-          <div className={styles.sideBarTrailers}>
-            <img src='/assets/trailers/marvel.jpeg' />
-            <p>Marvel Studios' Avengers: Endgame - Official Trailer </p>
+            <img src='/assets/trailers/aladin.jpeg' />
+            <p>Disney's Aladdin Official Trailer</p>
           </div>
         </aside>
       </section>

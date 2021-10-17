@@ -30,32 +30,10 @@ $gray-005: #28262E;
     }
 
     &Body {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, max-content));
       padding: 2rem 0;
-
-      &Movie {
-        padding: 0 1rem;
-
-        &Poster {
-          border-radius: 10px;
-        }
-
-        &Title {
-          padding: .5rem 0 .2rem 0;
-          font-weight: bold;
-        }
-
-        &Rating {
-          display: flex;
-          align-items: center;
-
-          & > label {
-            margin-left: 0.5rem;
-            font-weight: bold;
-            color: $gray-002;
-          }
-        }
-      }
+      gap: 1.5rem;
     }
   }
 }
