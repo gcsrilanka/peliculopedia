@@ -7,6 +7,7 @@ import {
 import HomePage from './screens/HomePage';
 import LoginPage from './screens/LoginPage';
 import AboutUsPage from './screens/AboutUsPage';
+import firebase from './firebase';
 
 function App() {
   return (
