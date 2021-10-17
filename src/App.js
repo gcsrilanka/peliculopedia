@@ -9,6 +9,7 @@ import LoginPage from './screens/LoginPage'
 import AboutUsPage from './screens/AboutUsPage'
 import NotFound from './screens/NotFound'
 import NavBarLayout from './common/NavBar'
+import firebase from './firebase'
 
 function App () {
   return (
