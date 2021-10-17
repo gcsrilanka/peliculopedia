@@ -6,6 +6,10 @@ $gray-002: #66686C;
 $gray-003: #EDEEF2;
 $gray-004: #222127;
 
+//Media query helpers
+$mobile-width: 544px;
+$tablet-width: 768px;
+
 .container {
   display: flex;
   flex-direction: column;
@@ -17,11 +21,94 @@ $gray-004: #222127;
   .header {
     display: grid;
     grid-template-columns: 2fr 4fr;
+    align-items: center;
     justify-content: space-between;
 
+    position: relative;
     padding: 2rem 3rem;
 
+    & > a {
+      display: flex;
+      align-items: center;
+    }
+
+    .hamburgerMenu {
+      display: none;
+    }
+
+    @media (max-width: $mobile-width) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      padding: 1rem 1.5rem;
+
+      & > a > svg {
+        margin-left: 16px;
+        width: 30px;
+        height: 30px;
+      }
+
+      .hamburgerMenu {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        &Button {
+          border: unset;
+          background: $gray-003;
+          height: 1.5008px;
+          width: 14px;
+          border-radius: 4px;
+          position: relative;
+          transition: all .2s;
+          cursor: pointer;
+
+          &:before {
+            content: '';
+            position: absolute;
+            width: 14px;
+            height: 2.5px;
+            left: 0px;
+            border-radius: 4px;
+            bottom: 6px;
+            background: $gray-003;
+            transition: all .2s;
+          }
+        
+          &:after {
+            content: '';
+            position: absolute;
+            width: 14px;
+            height: 1.5px;
+            left: 0px;
+            border-radius: 4px;
+            top: 6px;
+            background: $gray-003;
+            transition: all .2s;
+          }
+
+          &[data-active=true] {
+            background-color: transparent;
+
+            &:before {
+              top: 0;
+              transform: rotate(45deg);
+              background: $gray-003;
+              height: 1.5px;
+            }
+  
+            &:after {
+              top: 0;
+              transform: rotate(135deg);
+              background: $gray-003;
+            }
+          }
+        }
+      }
+    }
+
     &Actions {
+      width: 100%;
       display: flex;
       align-items: center;
       flex-wrap: wrap;
@@ -39,6 +126,11 @@ $gray-004: #222127;
         min-width: 50%;
 
         font-size: 1rem;
+
+        @media (max-width: $mobile-width) {
+          margin: 1rem 0;
+          min-width: 100%;
+        }
       }
 
       &List {
@@ -47,6 +139,11 @@ $gray-004: #222127;
         gap: 2rem;
         background: none;
         border: none;
+        background: $primary-color;
+
+        @media (max-width: $mobile-width) {
+          display: none;
+        }
 
         & > li > a {
           font-weight: bold;
@@ -75,9 +172,32 @@ $gray-004: #222127;
     grid-template-columns: 2fr 9fr 3fr;
     min-height: 100vh;
     height: 100%;
+    position: relative;
+
+    @media (max-width: $mobile-width) {
+      grid-template-columns: 1fr;
+    }
 
     .navBar {
       padding: 3rem 4rem 2rem 3rem;
+      background: $primary-color;
+
+      @media (max-width: $mobile-width) {
+        padding: 2rem 4rem 2rem 3rem;
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        transition: all .5s ease;
+        transform: translateX(-100%);
+
+        &[data-active=true] {
+          transform: translateX(0);
+        }
+      }
 
       &Categories {
         &List {
@@ -100,6 +220,35 @@ $gray-004: #222127;
           }
         }
       }
+
+      &Profile {
+        display: none;
+        padding-bottom: 1rem;
+        border-bottom: $gray-004 solid 1px ;
+
+        @media (max-width: $mobile-width) {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 2rem;
+          color: $gray-003;
+  
+          & > li {
+            font-weight: bold;
+            padding: .4rem 0;
+            color: $gray-003;
+  
+            & > a {
+              color: $gray-002;
+  
+              & > img {
+                max-width: 2rem;
+                border-radius: 100px;
+                border: $gray-002 1px solid;
+              }
+            }
+          }
+        }
+      }
     }
 
     .content {
@@ -107,6 +256,11 @@ $gray-004: #222127;
       background: $gray-001;
       padding: 3rem;
       border-radius: 20px 0 0 0;
+
+      @media (max-width: $mobile-width) {
+        padding: 2.5rem;
+        border-radius: 20px 20px 0 0;
+      }
     }
 
     .sideBar {

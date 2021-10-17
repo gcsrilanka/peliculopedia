@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import styles from './styles.module.scss'
@@ -10,9 +10,14 @@ import styles from './styles.module.scss'
  * @returns
  */
 const NavBarLayout = ({ children }) => {
+  const [isFacetsOpen, setIsFacetsOpen] = useState(false)
+
   return (
     <section className={styles.container}>
       <section className={styles.header}>
+        <div className={styles.hamburgerMenu}>
+          <button className={styles.hamburgerMenuButton} data-active={isFacetsOpen.toString()} onClick={() => setIsFacetsOpen(!isFacetsOpen)} />
+        </div>
         <Link to='/'>
           <svg width='57' height='50' viewBox='0 0 57 50' fill='none' xmlns='http://www.w3.org/2000/svg'>
             <path d='M14.6295 23.3549L17.7393 22.6553C20.6458 22.0013 22.6926 20.943 23.8796 19.4801C25.0621 17.9969 25.4063 16.1577 24.9125 13.9626C24.4141 11.7471 23.4362 10.2481 21.9789 9.46555C20.5419 8.67843 18.5328 8.57524 15.9515 9.15598L11.6527 10.1231L14.6295 23.3549ZM34.3798 11.4803C35.4589 16.2771 34.7802 20.2842 32.3437 23.5016C29.9275 26.7144 25.9551 28.9428 20.4266 30.1866L16.3717 31.0988L19.9385 46.9526L10.4872 49.0789L0.459175 4.50552L14.697 1.3023C20.1036 0.0859419 24.4722 0.330949 27.803 2.03732C31.1495 3.71879 33.3417 6.86644 34.3798 11.4803Z' fill='#E9E00A' />
@@ -30,7 +35,13 @@ const NavBarLayout = ({ children }) => {
         </div>
       </section>
       <section className={styles.body}>
-        <nav className={styles.navBar}>
+        <nav className={styles.navBar} data-active={isFacetsOpen.toString()}>
+          <ul className={styles.navBarProfile}>
+            <li><Link to='profile'><img src='/assets/user.jpeg' /></Link></li>
+            <li><Link to='movies'>Movies</Link></li>
+            <li><Link to='tv-Shows'>Tv Shows</Link></li>
+            <li><Link to='watch-list'>Watch List</Link></li>
+          </ul>
           <ul className={styles.navBarCategories}>
             <li className={styles.navBarCategoriesList}>
               Genre
