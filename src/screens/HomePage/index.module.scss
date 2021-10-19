@@ -1,0 +1,39 @@
+$primary-color: #0F0F14;
+$primary-font-color: #FFFFFF;
+
+$gray-001: #1A1820;
+$gray-002: #66686C;
+$gray-003: #EDEEF2;
+$gray-004: #222127;
+$gray-005: #28262E;
+
+.container {
+  .movieSection {
+    border-bottom: $gray-005 .1px solid;
+    margin-bottom: 2rem;
+
+    &Header {
+      display: flex;
+      justify-content: space-between;
+
+      & > h1{
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      & > button {
+        background: transparent;
+        font-size: 1rem;
+        color: $gray-002;
+        border: none;
+      }
+    }
+
+    &Body {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, max-content));
+      padding: 2rem 0;
+      gap: 1.5rem;
+    }
+  }
+}
