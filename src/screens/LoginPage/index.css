@@ -1,12 +1,46 @@
 .login {
-  height: 100vh;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.login button {
+  height: 5rem;
+  width: 5rem;
+  padding: 10px;
+  text-decoration: none;
+  flex-direction: column;
+}
+.google-logo {
+  height: 100%;
+}
+.card {
+  border-radius: 30px;
+  text-align: center;
+  height: 30%;
+  width: 40%;
+  background-color: #909e84;
+}
+.button-wrapper {
+  height: 75%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.login button {
-  width: 80px;
-  width: 25%;
-  padding: 10px;
-  text-decoration: none;
+.header {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-top: 2rem;
+}
+.banner {
+  height: 30%;
+}
+@media screen and (max-width: 614px) {
+  .card {
+    width: 90%;
+  }
+  .banner {
+    width: 100%;
+  }
 }
