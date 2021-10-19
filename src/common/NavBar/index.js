@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 import styles from './styles.module.scss'
 
@@ -11,6 +11,10 @@ import styles from './styles.module.scss'
  */
 const NavBarLayout = ({ children }) => {
   const [isFacetsOpen, setIsFacetsOpen] = useState(false)
+  const route = useLocation()
+
+  // Close Navbar on Route/URL changes
+  useEffect(() => setIsFacetsOpen(false), [route])
 
   return (
     <section className={styles.container}>

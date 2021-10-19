@@ -14,20 +14,20 @@ import firebase from './firebase'
 function App () {
   return (
     <Router>
-      <NavBarLayout>
-        <Switch>
+      <Switch>
+        <Route path='/login' exact>
+          <LoginPage />
+        </Route>
+        <NavBarLayout>
           <Route path='/' exact>
             <HomePage />
           </Route>
           <Route path='/about' exact>
             <AboutUsPage />
           </Route>
-          <Route path='/login' exact>
-            <LoginPage />
-          </Route>
           <Route component={NotFound} />
-        </Switch>
-      </NavBarLayout>
+        </NavBarLayout>
+      </Switch>
     </Router>
   )
 }
