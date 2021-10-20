@@ -1,18 +1,21 @@
 .login {
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: #0f0f14;
 }
 .header {
   font-size: 36px;
   font-weight: bold;
+  color: #FFF;
 }
 .banner {
   height: 20%;
 }
 @media screen and (max-width: 614px) {
   .banner {
-    width: 80%;
+    width: 70%;
   }
 }
