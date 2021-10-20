@@ -7,6 +7,10 @@ $gray-003: #EDEEF2;
 $gray-004: #222127;
 $gray-005: #28262E;
 
+//Media query helpers
+$mobile-width: 544px;
+$tablet-width: 768px;
+
 .container {
   .movieSection {
     border-bottom: $gray-005 .1px solid;
@@ -26,6 +30,16 @@ $gray-005: #28262E;
         font-size: 1rem;
         color: $gray-002;
         border: none;
+        cursor: pointer;
+      }
+
+      @media (max-width: $mobile-width) {
+        flex-direction: column;
+
+        & > button {
+          align-self: flex-start;
+          padding: 1rem 0;
+        }
       }
     }
 

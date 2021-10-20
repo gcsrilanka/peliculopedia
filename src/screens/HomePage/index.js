@@ -1,6 +1,6 @@
 import React from 'react'
 import MovieCard from '../../components/MovieCard'
-import styles from './index.module.scss'
+import styles from './styles.module.scss'
 
 const HomePage = () => {
   return (
